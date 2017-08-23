@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="задачи на применение jQuery "> 
+  <title>#hw7.js</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <div class="wrapper">
+
+      <h2> hw № 7 -  jQuery - </h2><hr>
+      <h3> Задачи [1-3] </h3> 
+      <p> 1. Добавьте на страницу элемент input[type=»text»]. Справа от input расположите кнопку «+». При нажатии кнопки «+» добавьте еще один элемент input ниже. Возле появившегося элемента создайте кнопку «-» при нажатии на которую данный input будет удаляться. Внизу формы расположите кнопку «собрать», по нажатию которой текст из элементов input будет выведен в расположенный на странице textarea. 
+        Внимание: Количество input на странице не больше . Удалять можно все элементы input кроме последнего.
+      </p> <br>
+      <p> 2. Модифицируйте задание 1, добавив три input[type=»radio»]. В опциях первого укажите «Четные», у второго — «Нечетные», у третьего — «Все». В зависимости от выбранной опции, информация считывается соответственно из четных, нечетных или всех input на странице. По умолчанию выбран последний radiobutton.  </p><br> 
+      <p> 3. Модифицируйте задание 1 добавив проверку на пустые input. Пустой input подсвечивается красным цветом, а рядом выводится надпись «Заполните поле!».  </p><br><hr>
+      <form name="myForm">
+        <input type="radio"  name = "radio" class="even" value="even"> Четные<br>
+        <input type="radio"  name = "radio" class="odd" value="odd"> Нечетные<br>
+        <input type="radio"  name = "radio" class="all" value="all" checked> Все<br>
+
+        <p >   <input type="text" class="inpText" value="" placeholder = "Заполните поле!">
+          <button class="enter enter_Task1"> + </button> 
+        </p>  
+      </form>
+      <button class="enter сompile"> собрать </button> <br>
+      <button class="enter сleanUp"> очистить </button> 
+      <textarea name="area" class="area" rows="15" cols="40"></textarea><br>
+      <hr>
+
+      <h3> Задача 4</h3>
+      <p> Реализуйте по нажатию на кнопке всплывающее окно с двумя кнопками. Первая кнопка «Опция ., вторая кнопка «Опция .. По нажатию на кнопку окно закрывается, а на странице выводится надпись «Вы выбрали опцию …» и номер выбранной опции. </p>
+
+      <button class="enter enter_Task4"> кнопка </button> 
+      <div class="box_1"> 
+       <button class="enter option option_1"> опция 1 </button> 
+       <button class="enter option option_2"> опция 2 </button> 
+     </div>
+     <div class="out"></div>
+     <hr>
+     <h3> Задача 5</h3> 
+     <p> Дан список из элементов. Реализуйте скрипт, который отслеживает клик на элементе списка и подсвечивает его красным цветом. При повторном клике, цвет убирается. Добавьте Input, который позволяет добавлять элементы в список. На них также, распостраняется событие click.  </p>
+
+     <button class="enter enter_Task5"> показать / скрыть </button> 
+     <div class="box_2">
+      <p> элемент 1</p>
+      <p> элемент 2</p>
+      <p> элемент 3</p>
+      <p> элемент 4</p>
+      <p> элемент 5</p>
+      <input type="button" class="enter enter_NewElement"" value="добавить элемент">
+    </div>
+
+    <hr>
+    <h3> Задача 6</h3>
+    <p> Дан блок с изображением. При наведении мыши, на блок, открывается текстовый блок с черным фоном, прозрачность фона .. Направление раскрытия — с правой части родителя. Если мышь убрана — то блок закрывается с задержкой по времени. </p>
+    <div class="box_6">
+      <textarea name="area6" class="back" rows="8" cols="25"></textarea>
+      <div class="front"></div>
+    </div>
+    <br>
+    <hr>
+
+    <h3> Задачи [7-8] </h3>
+    <p> 7. Реализуйте скрипт, который при наведении мыши на элементы (изображение или гиперссылка), будет внизу страницы показывать блок, в котором указан адрес изображения, и атрибут alt, если это изображение и адрес ссылки и атрибут title и target, если это гиперссылка. При отсуствии атрибутов — выводится красным предупреждение.  </p>
+    <p> 8. Модифицируйте скрипт из задачи 7 таким образом, чтобы те изображения, которые не имеют атрибут alt, подсвечивались красным цветом.    <button class="enter enter_Task8"> <- Узнать результат</button>  </p>
+    <div class="box_3">
+
+      <div class="hyperlink">
+        <a href="#" target="_blank">ссылка 1</a><br>
+        <a href="#" >ссылка 2</a><br>
+        <a href="#" target="_blank">ссылка 3</a><br>
+      </div>
+
+      <img src="images/1.jpg" title="images/1.jpg" alt="1">
+      <img src="images/3.jpg" title ="images/3.jpg" >
+      <img src="images/4.jpg" title ="images/4.jpg" alt="4">
+    </div>
+    <div class="outTask7"></div>
+    <hr>
+    <h3> Задачи [9-10]</h3>
+    <p>  9. Создайте скрипт для проверки наличия на странице элементов h1-h6 выводя при этом их количество. Если какого-либо заголовка нет — вывести предупреждение.  </p>
+    <p> 10.Модифицируйте скрипт 9 таким образом, чтобы он определял наличие meta title, meta description, meta keywords, рассчитывая длину первых двух. Если они отсутсвуют — выводится предупреждение.  </p>
+    <button class="enter enter_Task9">9. результат</button>
+    <button class="enter enter_Task10">10. результат</button>
+    <div class="heading">
+      <h4> Заголовок h4 </h4>
+      <h6> Заголовок h6 </h6>
+    </div>
+    <div class="outTask9"></div>
+    <hr>
+  </div>
+</main>
+<!-- <script src="js/jquery-3.2.1.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/hw7.js"></script>
+</body>
+</html>
